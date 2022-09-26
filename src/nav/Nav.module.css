@@ -1,0 +1,11 @@
+.nav {
+    border: 1px solid red;
+    width: 380px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.text{
+    color: white;
+    text-decoration-line: none;
+}

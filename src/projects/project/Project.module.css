@@ -1,0 +1,32 @@
+.project{
+    width: 250px;
+    background-color: #f8ecec;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    /*text-align: center;*/
+}
+
+.icon {
+    width: 200px;
+    height: 200px;
+    background-color: #a8a8a8;
+}
+
+.button{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 80px;
+}
+
+.title {
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.description{
+    text-align: justify-all;
+}
