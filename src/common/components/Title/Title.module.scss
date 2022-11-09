@@ -1,0 +1,19 @@
+@import '../../styles/sass/variables';
+
+.title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 2.5rem;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: $navBgColor;
+    width: 100px;
+    height: 1px;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+}
