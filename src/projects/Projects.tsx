@@ -1,22 +1,31 @@
 import React from 'react';
-import style from './Projects.module.css'
-import styleContainer from './../common/styles/Container.module.css'
+import style from "./Projects.module.scss"
+import styleContainer from "./../common/styles/Container.module.css"
 import {Project} from "./project/Project";
+import {DescriptionType} from "../skills/Skills";
+import {Title} from "../common/components/Title/Title";
+import todoImage from "./../assets/image/Todolist.jpg"
+import socialImage from "./../assets/image/socialNetwork.jpeg"
+
+
 
 export const Projects = () => {
 
-    const projects = [
-        {title: 'To-Do List', description: 'A collection of tasks that outlines the work a project manager or team plans to complete during a project.'},
-        {title: 'Social Network', description: 'A web based application developed in React & Redux. A social networking site is an online platform that allows people to create a public account and interact with other people on the website using internet.'},
+    const projects: Array<DescriptionType> = [
+        {title: 'To Do List', description: 'Complex project that using React-hooks, Redux, Axios and Rest API'},
+        {title: 'Social Network', description: 'A web based application developed in React & Redux. A social networking site is an online platform that .'},
     ]
+
+    const social = {backgroundImage: `url(${socialImage})`}
+    const todolist = {backgroundImage: `url(${todoImage})`}
 
     return (
         <div className={style.projectsBlock}>
             <div className={`${styleContainer.container} ${style.projectContainer}`}>
-                <h2 className={style.title}>My projects</h2>
+                <Title title="My projects"/>
                 <div className={style.projects}>
-                    <Project project={projects[0]}/>
-                    <Project project={projects[1]}/>
+                    <Project style={todolist} project={projects[0]}/>
+                    <Project style={social} project={projects[1]}/>
                 </div>
             </div>
 

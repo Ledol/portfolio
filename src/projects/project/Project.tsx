@@ -1,21 +1,26 @@
-import React, {FC} from 'react';
-import style from './Project.module.css'
+import React from 'react';
+import style from './Project.module.scss'
+import {DescriptionType} from "../../skills/Skills";
 
 type ProjectsPropsType = {
-    project: {title: string, description: string}
+    project: DescriptionType
+    style: { backgroundImage: string }
 }
 
-export const Project: FC<ProjectsPropsType> = ({project}) => {
-
+export const Project = (props:ProjectsPropsType) => {
 
 
     return (
         <div className={style.project}>
-            <div className={style.icon}>
-                <button className={style.button}>View</button>
+            <div className={style.projectImage} style={props.style}>
+
+               <a className={style.button} href='#' >View</a>
             </div>
-                <span className={style.title}>{project.title}</span>
-                <span className={style.description}>{project.description}</span>
+            <div className={style.projectInfo}>
+                    <h2 className={style.title}>{props.project.title}</h2>
+                    <span className={style.description}>{props.project.description}</span>
+            </div>
+
         </div>
     );
 };
